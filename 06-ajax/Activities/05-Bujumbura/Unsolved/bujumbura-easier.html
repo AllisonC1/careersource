@@ -15,7 +15,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript">
     // This is our API key. Add your own API key between the ""
-    var APIKey = "";
+    var APIKey = "704972e7bd13016ad41837c9d38c8bc1";
 
     // Here we are building the URL we need to query the database
     var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=Bujumbura,Burundi&appid=" + APIKey;
@@ -26,13 +26,38 @@
       method: "GET"
     }).then(function(response) {
 
-      // Create CODE HERE to Log the queryURL
-      // Create CODE HERE to log the resulting object
-      // Create CODE HERE to transfer content to HTML
-      // Create CODE HERE to calculate the temperature (converted from Kelvin)
-      // Hint: To convert from Kelvin to Fahrenheit: F = (K - 273.15) * 1.80 + 32
-      // Create CODE HERE to dump the temperature content into HTML
+      // Create CODE HERE to Log the queryURL 
 
+      console.log(queryURL); 
+
+      // Create CODE HERE to log the resulting object 
+
+      console.log(response); 
+
+      // Create CODE HERE to transfer content to HTML 
+
+      function displayWeather(cityName, windSpeed, humidity, temperature){
+
+      $(".city").html(response.name + "weather details");
+      $(".wind").text(response.wind.speed);
+      $(".humidity").text(response.main.humidity);
+      $(".temp").text(response.main.temp);
+      };
+
+      displayWeather()
+
+      // Create CODE HERE to calculate the temperature (converted from Kelvin) 
+      // Hint: To convert from Kelvin to Fahrenheit: F = (K - 273.15) * 1.80 + 32 
+
+      function toFahrenheit(kelvin) {
+      return (kelvin 273.15) * 1.80 + 32
+      }
+      // Create CODE HERE to dump the temperature content into HTML 
+
+      $(".wind").text(response.wind.speed);
+      $(".humidity").text(response.main.humidity);
+      $(".temp").text(response.main.temp); 
+      
     });
   </script>
 </body>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Trigger Random</title>
+  
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+</head>
+<body>
+
+  <div class="jumbotron">
+
+    <h1 class="text-center">Lottery Generator!</h1>
+
+    <div class="text-center">
+
+      <button id="random-button" class="btn btn-primary btn-lg"><h1><span class="fa fa-question"></span></h1></button>
+      
+    </div>
+
+  </div>
+
+  <h1 class="text-center" id="random-number"></h1>
+
+  <script type="text/javascript">
+
+    $(document).ready(function() {
+
+
+
+
+        $("#random-button").on("click", function(){
+        var generate = Math.floor((Math.random() *9) );         
+        $("#random-number").text(generate) 
+         
+        var i;
+        for (i = 0; i < 9 cars.length; i++) {
+        text += cars[i] + "<br>";
+        }
+
+     });
+    }) 
+     
+
+  </script>
+  
+</body>
+</html> 

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div> 
+        <h1> 
+            Car Adventures! 
+
+        </h1>
+        <p> 
+            Press "d" to start driving around the "w" world. Press "h" to honk. Press "t" to get a tuneup. 
+        </p>
+     
+      </div> 
+      <script type="text/javascript">
+
+        var car = {
+        make: "Honda",
+        model: "Fit",
+        color: "Blue Raspberry",
+        mileage: 3000,
+        isWorking: true,
+
+        driveToWork: function() {
+
+          alert("Old Mileage: " + this.mileage);
+
+          this.mileage = this.mileage + 8;
+
+          alert("New mileage: " + this.mileage);
+        },
+
+        driveAroundWorld: function() {
+
+          alert("Old Mileage: " + this.mileage);
+
+          this.mileage = this.mileage + 24000;
+
+          alert("New Mileage: " + this.mileage);
+          alert("Car needs a tuneup!");
+
+          this.isWorking = false;
+        },
+
+        getTuneUp: function() {
+          alert("Car is ready to go!");
+          this.isWorking = true;
+        },
+
+        honk: function() {
+          alert("Honk! Honk!");
+        }
+      };
+        // This function is run whenever the user presses a key.
+        document.onkeyup = function(event) {
+    
+          // Determines which key was pressed.
+          var userDirections = event.key; 
+    
+    
+          // This logic determines the outcome of the game (win/loss/tie), and incr(ements the appropriate number
+          if (userDirections === "d"){
+              car.driveToWork();
+          }
+
+          if (userDirections === "h"){ 
+              car.honk();
+            
+          }  
+
+          if (userDirections === "w"){
+             car.driveAroundWorld();
+          } 
+            
+            if (userDirections === "t"){
+                car.getTuneUp();
+            }
+        } 
+        
+      </script>
+    
+        
+
+</body>
+</html>

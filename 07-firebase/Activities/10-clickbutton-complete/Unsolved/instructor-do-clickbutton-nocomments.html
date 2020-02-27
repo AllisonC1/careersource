@@ -34,13 +34,13 @@
     firebase.initializeApp(config);
 
     // VARIABLES
-    // --------------------------------------------------------------------------------
+    // ----------------- Creating a database variable -------------------------------------
 
     var database = firebase.database();
     var clickCounter = 0;
 
     // FUNCTIONS + EVENTS
-    // --------------------------------------------------------------------------------
+    // ------------------ When the user clicks it's logged ----------------------------------
 
     $("#click-button").on("click", function() {
       clickCounter++;

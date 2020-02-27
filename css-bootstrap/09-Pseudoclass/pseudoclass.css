@@ -1,0 +1,6 @@
+#firstlink:hover { 
+    font-style: italic;
+} 
+#secondlink:active { 
+    font-size: 22px;
+}

@@ -28,7 +28,8 @@ var clickCounter = initialValue;
 // Change the value of our clickCounter to match the value in the database
 // ___________ = snapshot.val().______________________
 
-// Console Log the value of the clickCounter
+// Console Log the value of the clickCounter 
+  console.log(clickCounter);
 
 // Change the HTML using jQuery to reflect the updated clickCounter value
 

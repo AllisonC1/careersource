@@ -19,7 +19,8 @@ var database = firebase.database();
 
 // --------------------------------------------------------------
 // Link to Firebase Database for viewer tracking
-
+var connectionsRef = database.ref("./connections")
+var connectedRef = 
 
 // --------------------------------------------------------------
 // Initial Values
